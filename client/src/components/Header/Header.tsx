@@ -18,7 +18,6 @@ const NAV_ITEMS = [
 export default function Header() {
   const pathname = usePathname();
 
-  console.log("pat", pathname);
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-6">
       <Link href={NAV_ITEMS[0].link}>
