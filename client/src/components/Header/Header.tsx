@@ -2,7 +2,6 @@
 
 import LogoIcon from "@/assets/icons/LogoIcon";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 const NAV_ITEMS = [
@@ -16,8 +15,6 @@ const NAV_ITEMS = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
-
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-6">
       <Link href={NAV_ITEMS[0].link}>
