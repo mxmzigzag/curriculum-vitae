@@ -3,6 +3,9 @@ export const buttonWrapperStyles = `
   w-full 
   max-w-[220px] 
   h-[50px] 
+  uppercase
+  font-bold
+  tracking-widest
   border-2 
   border-solid 
   border-cGold 

@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         cBlack: "#161518",
+        cLightBlack: "#302d34",
+        cGray: "#757575",
         cWhite: "#f7f7f4",
         cGold: "#DFB252",
       },
