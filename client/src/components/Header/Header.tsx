@@ -16,7 +16,7 @@ const NAV_ITEMS = [
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-6">
+    <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-6 z-10">
       <Link href={NAV_ITEMS[0].link}>
         <LogoIcon className="text-cGold" />
       </Link>

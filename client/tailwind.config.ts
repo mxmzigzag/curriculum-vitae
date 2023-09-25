@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      padding: {
+        15: "60px",
+      },
       colors: {
         cBlack: "#161518",
         cWhite: "#f7f7f4",
