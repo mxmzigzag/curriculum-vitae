@@ -8,7 +8,8 @@ export const buttonWrapperStyles = `
   border-cGold 
   rounded-lg 
   relative
-  transition-all
+  duration-300
+  ease-in-out
 
   before:absolute 
   before:top-0
@@ -17,12 +18,14 @@ export const buttonWrapperStyles = `
   before:h-full
   before:bg-cGold
   before:-z-[1]
-  before:transition-all
+  before:duration-300
+  before:ease-in-out
 
   hover:pr-15
 
   hover:before:w-3/4
-  hover:before:transition-all
+  hover:before:duration-300
+  hover:before:ease-in-out
 `;
 
 export const iconStyles = `
@@ -32,7 +35,8 @@ export const iconStyles = `
   -translate-y-1/2
   z-10
   scale-0
-  transition-all
+  duration-300
+  ease-in-out
 
   group-hover:scale-100
 `;

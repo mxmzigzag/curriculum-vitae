@@ -1,11 +1,14 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "../Button/Button";
 
 import MZ from "@/assets/images/mz.png";
 import GithubIcon from "@/assets/icons/GithubIcon";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
-import Link from "next/link";
-import { Button } from "../Button/Button";
+import DownloadIcon from "@/assets/icons/DownloadIcon";
+import { DownloadButton } from "../DownloadButton/DownloadButton";
 
 const MY_LINKS = [
   {
@@ -52,7 +55,7 @@ export const Banner = () => {
             ))}
           </div>
         </div>
-        <Button />
+        <DownloadButton text="Download CV" filePath="/cv.pdf" />
       </div>
       <div className="absolute right-0 top-1/2 -translate-y-1/4">
         <Image
