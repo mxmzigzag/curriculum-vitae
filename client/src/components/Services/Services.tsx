@@ -1,6 +1,8 @@
 import React from "react";
-import { SectionHeading } from "../SectionHeading/SectionHeading";
+
 import { SERVICES } from "./data";
+
+import { SectionHeading } from "../SectionHeading/SectionHeading";
 import { ServiceCard } from "./Card/ServiceCard";
 
 export const Services = () => {
