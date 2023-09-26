@@ -7,7 +7,10 @@ import { ServiceCard } from "./Card/ServiceCard";
 
 export const Services = () => {
   return (
-    <section className="flex flex-col items-center h-screen py-28">
+    <section
+      className="flex flex-col items-center h-screen py-28"
+      data-id="services"
+    >
       <SectionHeading text="Services" />
       <div className="flex justify-between gap-10 w-full">
         {SERVICES.map((service) => (
