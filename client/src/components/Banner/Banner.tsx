@@ -2,12 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import MZ from "@/assets/images/mz.png";
-import GithubIcon from "@/assets/icons/GithubIcon";
-import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import { DownloadButton } from "../DownloadButton/DownloadButton";
 import { InfoPill } from "../InfoPill/InfoPill";
 import { pillMainText, pillNumber, pillSecondaryText } from "./assets";
+
+import { sedgwick } from "@/app/layout";
+import MZ from "@/assets/images/mz.png";
+import GithubIcon from "@/assets/icons/GithubIcon";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 
 const MY_LINKS = [
   {
@@ -33,8 +35,8 @@ export const Banner = () => {
           <span className="text-cGold">Max</span> Zahorskyi
         </h1>
         <div className="flex items-center mt-2.5">
-          <span className="uppercase font-bold tracking-widest">I am</span>
-          <span className="text-2xl italic ml-2 tracking-widest">
+          <span className="uppercase font-bold tracking-widest mr-2">I am</span>
+          <span className={`${sedgwick.className} text-2xl`}>
             Software Developer
           </span>
         </div>
@@ -49,6 +51,7 @@ export const Banner = () => {
               <Link
                 key={link.id}
                 href={link.link}
+                target="_blank"
                 className="hover:text-cGold transition-all"
               >
                 {link.icon}
