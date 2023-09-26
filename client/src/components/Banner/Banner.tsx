@@ -4,7 +4,12 @@ import Link from "next/link";
 
 import { DownloadButton } from "../DownloadButton/DownloadButton";
 import { InfoPill } from "../InfoPill/InfoPill";
-import { pillMainText, pillNumber, pillSecondaryText } from "./assets";
+import {
+  pillMainText,
+  pillNumber,
+  pillSecondaryText,
+  skillsLinkStyles,
+} from "./assets";
 
 import { sedgwick } from "@/app/layout";
 import MZ from "@/assets/images/mz.png";
@@ -59,7 +64,12 @@ export const Banner = () => {
             ))}
           </div>
         </div>
-        <DownloadButton text="Download CV" filePath="/cv.pdf" />
+        <div className="flex items-center w-full">
+          <DownloadButton text="Download CV" filePath="/cv.pdf" />
+          <Link href="#skills" className={skillsLinkStyles}>
+            My skills
+          </Link>
+        </div>
       </div>
       <div className="absolute right-0 top-1/2 -translate-y-1/4">
         <Image
