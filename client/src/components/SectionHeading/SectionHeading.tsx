@@ -3,7 +3,7 @@ import type { ISectionHeadingProps } from "./types";
 
 export const SectionHeading: FC<ISectionHeadingProps> = ({ text }) => {
   return (
-    <div className="flex items-center justify-center relative py-10 mb-14">
+    <div className="flex items-center justify-center relative py-10 mb-16">
       <h2 className="text-4xl font-bold uppercase tracking-widest z-10">
         {text}
       </h2>
