@@ -6,6 +6,7 @@ import Link from "next/link";
 import { getActiveSection } from "./assets";
 
 import LogoIcon from "@/assets/icons/LogoIcon";
+import { useRouter } from "next/router";
 
 const NAV_ITEMS = [
   { id: 0, title: "Home", link: "#home" },
@@ -21,13 +22,10 @@ export default function Header() {
   const [activeItem, setActiveItem] = useState<string>("");
 
   useEffect(() => {
-    const sections = Array.from(document.querySelectorAll("section[data-id]"));
+    const sections = Array.from(document.querySelectorAll("section[id]"));
     getActiveSection(sections, setActiveItem);
 
-    const hanldeScroll = () => {
-      getActiveSection(sections, setActiveItem);
-    };
-
+    const hanldeScroll = () => getActiveSection(sections, setActiveItem);
     window.addEventListener("scroll", hanldeScroll);
     return () => window.removeEventListener("scroll", hanldeScroll);
   }, []);

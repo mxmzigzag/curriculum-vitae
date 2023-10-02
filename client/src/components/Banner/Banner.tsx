@@ -31,10 +31,7 @@ const MY_LINKS = [
 
 export const Banner = () => {
   return (
-    <section
-      className="flex items-center relative h-screen py-28"
-      data-id="home"
-    >
+    <section id="home" className="flex items-center relative h-screen py-28">
       <div className="flex flex-col items-baseline">
         <p className="uppercase font-bold tracking-widest">
           Hello, <span className="text-cGold">my name is</span>

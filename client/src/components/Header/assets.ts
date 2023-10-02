@@ -5,11 +5,16 @@ export const getActiveSection = (
   const activeSection = sections
     .find((sec) => {
       const bounds = sec.getBoundingClientRect();
+      const secPos = bounds.y + window.scrollY;
+      const offset = 250;
+      const startPoint = secPos - offset;
 
       return (
-        bounds.y <= window.scrollY && bounds.y + bounds.height > window.scrollY
+        window.scrollY >= startPoint &&
+        startPoint + bounds.height > window.scrollY
       );
     })
-    ?.getAttribute("data-id");
+    ?.getAttribute("id");
+
   if (activeSection) setActiveItem(activeSection);
 };
