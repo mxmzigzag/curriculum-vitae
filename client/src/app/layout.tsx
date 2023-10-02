@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto, Sedgwick_Ave_Display } from "next/font/google";
 
-import "./globals.css";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+
+import "./globals.css";
 
 const roboto = Roboto({
   weight: ["300", "400", "700"],
@@ -31,6 +33,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Header />
         <main className="container px-4 mx-auto">{children}</main>
+        <Footer />
       </body>
     </html>
   );
