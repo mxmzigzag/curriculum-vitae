@@ -2,14 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { DownloadButton } from "../DownloadButton/DownloadButton";
-import { InfoPill } from "../InfoPill/InfoPill";
+import { getHashedRoute } from "../Header/assets";
+import { EStaticRoutes } from "../Header/types";
 import {
   pillMainText,
   pillNumber,
   pillSecondaryText,
   skillsLinkStyles,
 } from "./assets";
+import { DownloadButton } from "../DownloadButton/DownloadButton";
+import { InfoPill } from "../InfoPill/InfoPill";
 
 import { sedgwick } from "@/app/layout";
 import MZ from "@/assets/images/mz.png";
@@ -66,7 +68,10 @@ export const Banner = () => {
         </div>
         <div className="flex items-center w-full">
           <DownloadButton text="Download CV" filePath="/cv.pdf" />
-          <Link href="#skills" className={skillsLinkStyles}>
+          <Link
+            href={getHashedRoute(EStaticRoutes.skills)}
+            className={skillsLinkStyles}
+          >
             My skills
           </Link>
         </div>

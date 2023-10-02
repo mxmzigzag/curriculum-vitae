@@ -18,3 +18,5 @@ export const getActiveSection = (
 
   if (activeSection) setActiveItem(activeSection);
 };
+
+export const getHashedRoute = (route: string) => `#${route}`;
