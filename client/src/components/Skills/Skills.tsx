@@ -1,7 +1,9 @@
 import React from "react";
+
+import { SKILLS } from "./data";
+
 import { SectionHeading } from "../SectionHeading/SectionHeading";
 import { SkillCard } from "./Card/SkillCard";
-import { SKILLS } from "./data";
 
 export const Skills = () => {
   return (

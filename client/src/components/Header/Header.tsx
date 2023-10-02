@@ -6,7 +6,6 @@ import Link from "next/link";
 import { getActiveSection } from "./assets";
 
 import LogoIcon from "@/assets/icons/LogoIcon";
-import { useRouter } from "next/router";
 
 const NAV_ITEMS = [
   { id: 0, title: "Home", link: "#home" },

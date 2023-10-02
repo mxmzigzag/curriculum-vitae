@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import React, { memo, type FC } from "react";
 
 import type { IServiceCardProps } from "./types";
 import {
@@ -8,7 +8,7 @@ import {
   serviceCardTitleStyles,
 } from "./assets";
 
-export const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
+export const ServiceCard: FC<IServiceCardProps> = memo(({ service }) => {
   return (
     <div className={serviceCardStyles}>
       <div className={serviceCardIconStyles}>{service.icon}</div>
@@ -16,4 +16,6 @@ export const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
       <p className={serviceCardDescriptionStyles}>{service.description}</p>
     </div>
   );
-};
+});
+
+ServiceCard.displayName = "ServiceCard";

@@ -1,7 +1,7 @@
-import React, { type FC } from "react";
+import React, { memo, type FC } from "react";
 import type { ISectionHeadingProps } from "./types";
 
-export const SectionHeading: FC<ISectionHeadingProps> = ({ text }) => {
+export const SectionHeading: FC<ISectionHeadingProps> = memo(({ text }) => {
   return (
     <div className="flex items-center justify-center relative py-10 mb-16">
       <h2 className="text-4xl font-bold uppercase tracking-widest z-10">
@@ -12,4 +12,6 @@ export const SectionHeading: FC<ISectionHeadingProps> = ({ text }) => {
       </span>
     </div>
   );
-};
+});
+
+SectionHeading.displayName = "SectionHeading";
