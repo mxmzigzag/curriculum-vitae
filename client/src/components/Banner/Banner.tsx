@@ -15,21 +15,7 @@ import { InfoPill } from "../InfoPill/InfoPill";
 
 import { sedgwick } from "@/app/layout";
 import MZ from "@/assets/images/mz.png";
-import GithubIcon from "@/assets/icons/GithubIcon";
-import LinkedInIcon from "@/assets/icons/LinkedInIcon";
-
-const MY_LINKS = [
-  {
-    id: "github",
-    icon: <GithubIcon size={32} />,
-    link: "https://github.com/mxmzigzag",
-  },
-  {
-    id: "linkedin",
-    icon: <LinkedInIcon size={32} />,
-    link: "https://www.linkedin.com/in/max-zahorskyi-11390121b/",
-  },
-];
+import { MyLinks } from "../MyLinks/MyLinks";
 
 export const Banner = () => {
   return (
@@ -48,23 +34,12 @@ export const Banner = () => {
           </span>
         </div>
         <div className="py-10 max-w-2xl">
-          <p className="text-lg opacity-70">
+          <p className="text-lg opacity-70 mb-6">
             From Vinnytsia, Ukraine. I have a high proficiency in software
             development sphere and commercial experience in modern development
             processes.
           </p>
-          <div className="flex items-center gap-4 mt-6">
-            {MY_LINKS.map((link) => (
-              <Link
-                key={link.id}
-                href={link.link}
-                target="_blank"
-                className="hover:text-cGold transition-all"
-              >
-                {link.icon}
-              </Link>
-            ))}
-          </div>
+          <MyLinks />
         </div>
         <div className="flex items-center w-full">
           <DownloadButton text="Download CV" filePath="/cv.pdf" />
