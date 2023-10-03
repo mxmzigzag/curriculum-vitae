@@ -17,6 +17,7 @@ const config: Config = {
         cGray: "#757575",
         cWhite: "#f7f7f4",
         cGold: "#DFB252",
+        cRed: "#ff3333",
       },
     },
   },
