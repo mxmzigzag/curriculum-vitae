@@ -1,5 +1,4 @@
-export const buttonWrapperStyles = `
-  group
+const baseButtonWrapperStyles = `
   w-full 
   max-w-[220px] 
   h-[50px] 
@@ -8,11 +7,8 @@ export const buttonWrapperStyles = `
   tracking-widest
   border-2 
   border-solid 
-  border-cGold 
   rounded-lg 
   relative
-  duration-300
-  ease-in-out
 
   before:absolute 
   before:top-0
@@ -23,12 +19,25 @@ export const buttonWrapperStyles = `
   before:-z-[1]
   before:duration-300
   before:ease-in-out
+`;
+
+export const activeButtonWrapperStyles = `
+  ${baseButtonWrapperStyles}
+  group
+  border-cGold 
+  duration-300
+  ease-in-out
 
   hover:pr-15
 
   hover:before:w-3/4
   hover:before:duration-300
   hover:before:ease-in-out
+`;
+
+export const disabledButtonWrapperStyles = `
+  ${baseButtonWrapperStyles}
+  border-cGray 
 `;
 
 export const iconStyles = `

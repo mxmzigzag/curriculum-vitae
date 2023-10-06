@@ -9,4 +9,5 @@ export interface IButtonProps {
   icon: React.ReactNode;
   onClick?: () => any;
   type?: EButtonType;
+  disabled?: boolean;
 }

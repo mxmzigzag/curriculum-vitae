@@ -12,6 +12,7 @@ import { Button } from "@/components/Button/Button";
 import { EButtonType } from "@/components/Button/types";
 
 import SubmitIcon from "@/assets/icons/SubmitIcon";
+import { isEqual } from "@/utils/object.utils";
 
 export const ContactForm = () => {
   const defaultValues: IContactFormData = {
@@ -25,15 +26,20 @@ export const ContactForm = () => {
     register,
     formState: { errors },
     handleSubmit,
+    watch,
   } = useForm({
     defaultValues,
     resolver: yupResolver(schema),
   });
 
+  const formState = watch();
+
   const onSubmit = async (formData: IContactFormData) => {
     try {
       console.log("className", formData);
-    } catch (err: any) {}
+    } catch (err: any) {
+      console.log("ERR:", err);
+    }
   };
 
   return (
@@ -70,7 +76,12 @@ export const ContactForm = () => {
         error={errors.message?.message}
       />
       <div className="flex justify-end px-5 w-full">
-        <Button text="Submit" icon={<SubmitIcon />} type={EButtonType.submit} />
+        <Button
+          text="Submit"
+          icon={<SubmitIcon />}
+          type={EButtonType.submit}
+          disabled={isEqual(formState, defaultValues)}
+        />
       </div>
     </form>
   );
